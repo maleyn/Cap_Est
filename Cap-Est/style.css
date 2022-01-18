@@ -1,0 +1,1332 @@
+/* reset des marges  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* declaration des variables  */
+:root {
+  --fond-noir: rgb(41, 41, 41);
+  --text-blanc: rgb(236, 236, 236);
+  --saumon: rgb(226, 204, 176);
+  --gris: rgb(235, 235, 235);
+  --grisfonce: rgb(219, 219, 219);
+}
+
+/* declaration des polices  */
+@font-face {
+  font-family: 'realist';
+  src: url('fonts/realist-webfont.woff2') format('woff2'),
+    url('fonts/realist-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'migha';
+  src: url('fonts/migha-expanded-webfont.woff2') format('woff2'),
+    url('fonts/migha-expanded-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'philo';
+  src: url('fonts/philosopher-regular-webfont.woff2') format('woff2'),
+    url('fonts/philosopher-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'philob';
+  src: url('fonts/philosopher-bold-webfont.woff2') format('woff2'),
+    url('fonts/philosopher-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--gris);
+  color: rgb(49, 49, 49);
+  font-family: 'roboto', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+.italic {
+  font-style: italic;
+}
+
+b {
+  font-weight: 400;
+}
+
+/* menu pour pc caché en mobile  */
+#navigation2 {
+  display: none;
+}
+
+/* container largeur max */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.fondgris {
+  background-color: var(--gris);
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+}
+
+.fondgrisfonce {
+  background-color: var(--grisfonce);
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+}
+
+/* marge du haut des pages a cause du bandeau fixe */
+.marge-top {
+  margin-top: 70px;
+}
+
+/* padding des pages */
+.padding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* logo, tel et nom restaurant bandeau haut*/
+.resto {
+  position: fixed;
+  left: 20px;
+  top: 15px;
+  color: rgb(236, 236, 236);
+  font-size: 2.4rem;
+}
+
+.resto2 {
+  position: fixed;
+  left: 20px;
+  color: rgb(236, 236, 236);
+  top: 50px;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+#head #menu #tel {
+  position: fixed;
+  top: 21px;
+  font-size: 1.9rem;
+  right: 80px;
+}
+
+/* numéro caché version mobile */
+#head #menu #tel #numero {
+  display: none;
+}
+
+#head a {
+  color: var(--text-blanc);
+}
+
+/* menu burger  */
+#menu {
+  z-index: 10000;
+  font-family: 'realist', serif;
+  background-color: rgb(41, 41, 41);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  -moz-box-shadow: 0 0 8px rgb(143, 143, 143);
+  -webkit-box-shadow: 0 0 8px rgb(128, 128, 128);
+  box-shadow: 0 0 8px rgb(71, 71, 71);
+}
+
+.burger {
+  z-index: 10000;
+  color: rgb(236, 236, 236);
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 4px solid currentColor;
+  width: 28px;
+  transition: border-bottom 1s ease-in-out;
+  -webkit-transition: border-bottom 1s ease-in-out;
+  position: fixed;
+  right: 20px;
+  top: 30px;
+}
+
+.burger::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.burger:before {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.burger:after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked~.burger {
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.8s ease-in-out;
+  -webkit-transition: border-bottom 0.8s ease-in-out;
+}
+
+.burger-check:checked~.navigation {
+  max-height: 500px;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+}
+
+#navigation1 ul {
+  margin-top: 25px;
+}
+
+#navigation1 li {
+  list-style: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+#navigation1 li a {
+  display: block;
+  text-decoration: none;
+  color: rgb(236, 236, 236);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: end;
+  padding-right: 25px;
+}
+
+#navigation1 li a:hover {
+  background-color: rgb(65, 65, 65);
+}
+
+/* rotation du burger au premier click*/
+.burger-check:checked~.burger:before {
+  -ms-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+/* rotation du burger au deuxieme click */
+.burger-check:checked~.burger:after {
+  -ms-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+/* menu principale  */
+.navigation {
+  z-index: 9999;
+  font-family: 'philob';
+  font-weight: 900;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+  position: fixed;
+  background-color: rgb(41, 41, 41);
+  width: 100%;
+  opacity: 0.9;
+  font-weight: 100;
+  letter-spacing: 0.08rem;
+}
+
+#ecran_accueil {
+  height: 700px;
+}
+
+/* photo de fond ecran d'accueil*/
+#photoback1 {
+  background-image: url('images/photo_accueil_ld.jpg');
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 70px;
+  -moz-box-shadow: 0 0 10px rgb(143, 143, 143);
+  -webkit-box-shadow: 0 0 10px rgb(128, 128, 128);
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+  width: 100%;
+}
+
+/* logo, texte et animation ecran d'accueil */
+#logo {
+  position: relative;
+  bottom: 550px;
+  animation-duration: 2s;
+  animation-name: slidein;
+  overflow: hidden;
+}
+
+#logo img {
+  width: 50%;
+  max-width: 400px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 200%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* paramètre des boutons du site */
+.boutons {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-weight: bold;
+  align-items: center;
+}
+
+.boutons a {
+  font-family: 'philob';
+  text-transform: uppercase;
+  font-weight: 800;
+  color: white;
+  background-color: rgb(41, 41, 41);
+  width: 140px;
+  border: 1px solid rgb(32, 32, 32);
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  -moz-box-shadow: 0 0 10px rgb(44, 44, 44);
+  -webkit-box-shadow: 0 0 15px rgb(29, 29, 29);
+  box-shadow: 6px 6px 15px rgb(0, 0, 0);
+  transition: 0.2s;
+}
+
+.boutons a:hover {
+  background-color: blanchedalmond;
+  color: rgb(54, 54, 54);
+  -moz-box-shadow: 0 0 10px rgb(87, 87, 87);
+  -webkit-box-shadow: 0 0 10px rgb(65, 65, 65);
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+  transition: 0.2s;
+}
+
+/* boutons 1ere section */
+.boutonaccueil {
+  position: relative;
+  bottom: 70%;
+}
+
+.boutonaccueil a {
+  padding: 20px;
+  margin: 5px;
+}
+
+.boutonaccueil a:hover {
+  -moz-box-shadow: 0 0 10px rgb(167, 209, 50);
+  -webkit-box-shadow: 0 0 20px rgb(230, 226, 28);
+  box-shadow: 0 0 20px rgb(248, 255, 183);
+}
+
+a.boutonreservation {
+  background-color: rgb(255, 151, 65);
+}
+
+/* 2éme section presentation restaurant */
+
+#contenu #presentation h4,
+#presentation small {
+  font-family: 'realist';
+}
+
+#contenu #presentation h3 {
+  font-size: 1.2rem;
+}
+
+#contenu #presentation h4 {
+  font-size: 2.8rem;
+}
+
+#contenu #presentation small {
+  position: relative;
+  font-size: 1.2rem;
+  font-style: italic;
+  top: -20px;
+}
+
+#contenu #presentation h5 {
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+#contenu #presentation p {
+  text-align: justify;
+  padding: 0 30px;
+}
+
+/* bouton photo de la 2ième section */
+a.boutonphoto {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+/* 3iéme section formule et carte */
+#menu_restaurant {
+  background-image: url('images/wooden-texture.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-box-shadow: 0 0 10px rgb(143, 143, 143);
+  -webkit-box-shadow: 0 0 10px rgb(128, 128, 128);
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+}
+
+#menu_restaurant h3 {
+  font-family: 'realist';
+  font-size: 2.5rem;
+  color: var(--text-blanc);
+  letter-spacing: 0.05rem;
+  padding-bottom: 15px;
+}
+
+#menu_restaurant small {
+  position: relative;
+  top: -25px;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+#menu_restaurant #articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.2rem;
+}
+
+#menu_restaurant .formule {
+  margin: 18px;
+  -moz-box-shadow: 0 0 10px rgb(44, 44, 44);
+  -webkit-box-shadow: 0 0 20px rgb(29, 29, 29);
+  box-shadow: 10px 10px 20px rgb(0, 0, 0);
+}
+
+#menu_restaurant .vignetteformule div {
+  position: relative;
+  bottom: 10px;
+  font-weight: 400;
+}
+
+#menu_restaurant .vignetteformule h4 {
+  font-family: 'philo';
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+#menu_restaurant .vignetteformule p:last-child {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(197, 90, 2);
+}
+
+#menu_restaurant a.vignetteformule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 300px;
+  height: 190px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: black;
+}
+
+#menu_restaurant a.vignetteformule:hover {
+  -moz-box-shadow: 0 0 10px rgb(167, 209, 50);
+  -webkit-box-shadow: 0 0 20px rgb(230, 226, 28);
+  box-shadow: 0 0 20px rgb(248, 255, 183);
+  transition: 0.2s;
+  filter: contrast(110%);
+  filter: brightness(110%);
+}
+
+#contenu #menu_restaurant a.boutoncarte {
+  margin: 40px 0px 40px 0;
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: rgb(255, 151, 65);
+}
+
+#contenu #menu_restaurant a.boutoncarte:hover {
+  background-color: var(--saumon);
+  -moz-box-shadow: 0 0 10px rgb(167, 209, 50);
+  -webkit-box-shadow: 0 0 20px rgb(230, 226, 28);
+  box-shadow: 0 0 20px rgb(248, 255, 183);
+}
+
+/* images et fonds des formules */
+#contenu #menu_restaurant #articles img {
+  width: 150px;
+  height: 100px;
+  position: relative;
+  bottom: 24px;
+  left: 25%;
+  clip-path: ellipse(30% 50%);
+}
+
+#contenu #menu_restaurant #articles #moussaillon {
+  background-image: url('images/texture-background2_ld.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contenu #menu_restaurant #articles #capjour {
+  background-image: url('images/texture-background2_ld.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contenu #menu_restaurant #articles #express {
+  background-image: url('images/texture-background2_ld.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contenu #menu_restaurant #articles #tradition {
+  background-image: url('images/texture-background2_ld.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 4ième section présentation des cuisiniers */
+/* blog caché en mode mobile et tablette */
+#cuisinier_blog #blog {
+  display: none;
+}
+
+#cuisinier {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px auto;
+  font-size: 1.6rem;
+  max-width: 800px;
+}
+
+#cuisinier .card {
+  max-width: 300px;
+  margin: 30px auto;
+}
+
+#cuisinier .card img {
+  min-width: 250px;
+  max-width: 450px;
+  border-radius: 4%;
+}
+
+#cuistos h3 {
+  font-family: 'realist';
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#cuisinier .card h4 {
+  margin-top: 10px auto;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+#cuisinier .card h5 {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 15px;
+  line-height: 7px;
+}
+
+#cuisinier .card p {
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+/* footer (instagram, googlemap, horaire, liens, avis client  */
+#pied {
+  color: var(--text-blanc);
+  -moz-box-shadow: 0 0 10px rgb(143, 143, 143);
+  -webkit-box-shadow: 0 0 10px rgb(128, 128, 128);
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+}
+
+#fond-tableau {
+  background-image: url('images/blackboard_ld.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 20px;
+}
+
+#pied #flexpied {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* instagram */
+}
+
+#pied #instagram #instaflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+}
+
+#pied #instagram #instaflex .photos img {
+  width: 170px;
+  height: 150px;
+  background-color: yellow;
+  margin: 0px 2px;
+}
+
+#instagram h3,
+#localisation h3,
+#horaires h3 {
+  margin: 25px auto 25px auto;
+  font-family: 'philob';
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* carte google map  */
+#pied #localisation #map {
+  border-radius: 2%;
+}
+
+/* horaire d'ouverture */
+#pied #horaires #ouverture {
+  font-size: 1.2rem;
+  width: 350px;
+  padding-left: 30px;
+}
+
+#pied #horaires h3 {
+  padding-left: 20px;
+}
+
+#pied #horaires h4 {
+  padding-top: 20px;
+  font-size: 1.2rem;
+  color: var(--saumon);
+}
+
+#pied #horaires #ouverture td:first-child {
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+#pied #horaires #ouverture td {
+  text-align: left;
+}
+
+/* lien et avis */
+#pied #finpage {
+  display: flex;
+  margin-top: 20px;
+  max-width: 650px;
+}
+
+#pied .colonne {
+  width: 50%;
+}
+
+#pied #liens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#pied #liens a {
+  padding: 5px;
+  margin: 7px;
+  font-size: 2.5rem;
+  color: var(--text-blanc);
+  border: 2px solid var(--text-blanc);
+  border-radius: 50%;
+  width: 50px;
+  margin-left: 33%;
+  background-color: var(--fond-noir);
+}
+
+#pied #liens a:hover {
+  color: rgb(202, 119, 64);
+  background-color: var(--text-blanc);
+}
+
+#pied #finpage #avis {
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-right: 15px;
+}
+
+#pied #finpage #avis h3 {
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#pied #finpage #avis i {
+  color: rgb(218, 214, 29);
+}
+
+#pied #finpage #avis p {
+  padding-top: 7px;
+  text-align: justify;
+}
+
+#pied #finpage #avis p small {
+  font-weight: 300;
+}
+
+#pied #copyright {
+  background-color: rgb(133, 97, 81);
+  color: var(--fond-noir);
+  padding: 5px;
+  font-size: 1.1rem;
+}
+
+#pied #copyright a {
+  color: var(--fond-noir);
+}
+
+#pied #copyright a:hover {
+  color: rgb(202, 119, 64);
+}
+
+/* page de contact */
+#infos {
+  padding-top: 50px;
+}
+
+#infos h3 {
+  font-family: 'realist';
+  font-size: 1.9rem;
+  padding-bottom: 15px;
+}
+
+#infos a {
+  color: rgb(116, 137, 168);
+  font-size: 1.4rem;
+}
+
+#infos a:hover {
+  color: rgb(160, 115, 57);
+}
+
+#infos p {
+  padding: 5px;
+}
+
+#infos i {
+  padding-right: 15px;
+}
+
+#contact {
+  margin-top: 20px;
+  padding-top: 20px;
+  font-family: 'philo';
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+}
+
+#contact p {
+  margin: 15px 0;
+}
+#contact #champs {
+  color: rgb(170, 0, 0);
+}
+#contact input {
+  padding: 4px;
+  font-size: 1rem;
+}
+
+#contact h3 {
+  padding-bottom: px;
+  font-weight: 800;
+}
+
+#contact label {
+  display: inline-block;
+  width: 140px;
+  vertical-align: center;
+  text-align: left;
+}
+
+#contact label.petit {
+  width: 30px;
+  text-align: left;
+}
+
+#contact textarea {
+  width: 320px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#contact textarea:focus {
+  background-color: rgb(196, 207, 228);
+}
+
+#contact textarea:hover {
+  background-color: rgb(196, 228, 226);
+}
+
+#contact .boutonform {
+  background-color: var(--saumon);
+  border: none;
+  border: 1px solid #0085a6;
+  margin: 10px 10px 0 0;
+  padding: 10px 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+#contact #votremessage {
+  font-family: 'philob';
+  padding-top: 20px;
+  font-size: 1.3rem;
+}
+#contact #consentement_checkbox {
+vertical-align: top;
+}
+#contact #consentement {
+  width: 320px;
+  font-size: 1rem;
+}
+#contact #consentement a:hover{
+  text-decoration: underline;
+}
+#contact input:hover {
+  background-color: rgb(196, 228, 226);
+}
+
+#contact input:focus {
+  border: none;
+  background-color: rgb(196, 207, 228);
+}
+
+#contact .boutonform:hover {
+  cursor: pointer;
+  background-color: rgb(250, 157, 81);
+  color: white;
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+}
+
+/* Blog  */
+.fondblog {
+  background-color: var(--grisfonce);
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+#blog #actualite {
+  padding-top: 25px;
+  font-weight: 300;
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#blog img {
+  max-width: 350px;
+  margin: 5px;
+}
+
+#blog h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#blog .card_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+#blog .card h4 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#blog .card h5 {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-size: 1.1rem;
+
+}
+
+#blog .card .lienblog {
+  font-size: 1.1rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#blog .card .lienblog {
+  text-align: left;
+}
+
+#blog .card .lienblog a {
+  color: rgb(197, 90, 2);
+}
+
+#blog .card .lienblog a:hover {
+  color: black;
+}
+
+#blog #navigationblog {
+  padding-top: 10px;
+}
+
+#blog #navigationblog a {
+  color: black;
+}
+
+#blog #navigationblog a:first-child {
+  color: var(--saumon);
+}
+
+/* bouton commentaire du blog */
+#blog .card input {
+  display: none;
+}
+
+#blog .card label {
+  cursor: pointer;
+  position: relative;
+  left: 190px;
+}
+
+/* boite de commentaire */
+.boitecomment {
+  font-size: 1.1rem;
+  display: none;
+  border: 1px solid grey;
+  width: 330px;
+  height: 120px;
+  background-color: rgb(197, 197, 197);
+  flex-wrap: wrap;
+  letter-spacing: -0.05rem;
+  margin-top: 10px;
+  padding: 5px;
+  overflow: auto;
+}
+
+.boitecomment h6 {
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.lienblog input[type=checkbox]:checked+.boitecomment {
+  display: flex;
+
+}
+
+.lienblog label {
+  color: rgb(197, 90, 2);
+}
+
+.lienblog label:hover {
+  color: black;
+}
+
+/* mise en page des articles du blog */
+.containertext {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.articlesblog .pagedublog {
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+  padding-bottom: 50px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  background-color: var(--grisfonce);
+}
+
+.articlesblog .pagedublog img {
+  padding-top: 20px;
+  width: 95%;
+}
+
+.articlesblog .pagedublog .containertext h3,
+.containertext h4,
+.containertext h5,
+.containertext h6 {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.articlesblog .pagedublog .containertext h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  padding-top: 15px;
+}
+
+.articlesblog .pagedublog .containertext h4 {
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  font-size: 1rem;
+}
+
+.articlesblog .pagedublog .containertext h5 {
+  font-size: 1.1rem;
+}
+
+.articlesblog .pagedublog .containertext h6 {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.articlesblog .pagedublog .containertext p {
+  padding: 10px 50px 10px 50px;
+  text-align: justify;
+}
+
+#boutonfixeblog {
+  position: fixed;
+  top: 450px;
+  right: 0px;
+}
+
+#boutonfixeblog a {
+  border: 1px solid var(--saumon);
+  padding:5px 12px;
+  color: rgb(197, 90, 2);
+  background-color: var(--saumon);
+  border-radius: 20%;
+  opacity: 0.7;
+
+}
+#boutonfixeblog a:hover {
+  background-color: var(--fond-noir);
+  color: var(--text-blanc);
+}
+/* Page Menu */
+.formules_detail {
+width: 95%;
+margin: 0 auto;
+}
+#menu_formules #imageplat1 {
+background-image: url(images/steak_frite_ld.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+position:relative;
+top: 20px;
+height: 300px;
+margin:10px auto;
+}
+
+/* ajustement pour les très petits écrans */
+@media screen and (max-width:347px) {
+  .boutonaccueil a {
+    padding: 10px;
+  }
+
+  .boutons a {
+    font-size: 0.8rem;
+  }
+
+  #pied #instagram #instaflex .photos img {
+    width: 130px;
+    height: 120px;
+  }
+
+  #localisation iframe {
+    width: 270px;
+    height: 220px;
+  }
+
+  #pied #horaires #ouverture {
+    font-size: 0.9rem;
+    width: 310px;
+  }
+
+  #pied #horaires h3 {
+    font-size: 1.1rem;
+    padding-left: 15px;
+  }
+
+  #cuisinier_blog #cuisinier p {
+    padding: 0 8px;
+  }
+
+  /* ajustement des commentaire et du bouton commentaire dans la page blog */
+  .boitecomment {
+    width: 300px;
+  }
+
+  #blog .card label {
+    left: 150px;
+  }
+}
+
+@media screen and (min-width:693px) {
+
+  /* ajustement des horaires d'ouverture pour le flex */
+  #localisation h3 {
+    padding-top: 20px;
+  }
+
+  #horaires h3 {
+    padding-bottom: 30px;
+  }
+
+  #horaires td:first-child {
+    padding: 5px;
+  }
+
+  #horaires h4 {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width:710px) {
+
+  /* ajustement des horaires d'ouverture pour le flex */
+  #horaires td:first-child {
+    padding: 5px;
+  }
+
+  #horaires h4 {
+    margin-top: 10px;
+  }
+
+  /* ajustement de la taille du container pour le footer  */
+  #pied .container {
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width:992px) {
+
+  /* meilleur résolution image version pc */
+  #photoback1 {
+    background-image: url('images/photo_accueil.jpg');
+  }
+
+  /* rajout de marge pour la version pc  */
+  .marge-pc {
+    margin: 70px auto 70px auto;
+  }
+
+  .padding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  /* agrandissement bouton version pc   */
+  #contenu #menu_restaurant a.boutoncarte {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+
+  .boutons a {
+    width: 180px;
+    padding: 25px;
+    font-size: 1.5rem;
+  }
+
+  /* affichage du blog page index */
+  #cuisinier_blog #blog {
+    display: block;
+    max-width: 560px;
+  }
+
+  #cuisinier_blog #cuistos {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  #cuisinier_blog {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #cuisinier_blog #blog img {
+    max-width: 250px;
+    margin: 5px;
+  }
+
+  #cuisinier_blog #blog {
+    padding-top: 20px;
+  }
+
+  #cuisinier_blog #blog h3 {
+    padding-bottom: 12px;
+    font-family: 'realist';
+  }
+
+  #cuisinier_blog #blog .card h4 {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  #cuisinier_blog #blog .card h5 {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    font-size: 0.9rem;
+  }
+
+  #cuisinier_blog #blog .card .lienblog {
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #cuisinier_blog #blog .card label {
+    left: 120px;
+  }
+
+  #cuisinier_blog .container {
+    margin: 0 auto;
+  }
+
+  /* ajustement des images cuisiner */
+  #cuisinier .card {
+    max-width: 400px;
+  }
+
+  /* ajustement des commentaires page index */
+  #cuisinier_blog #blog .boitecomment {
+    font-size: 0.9rem;
+    width: 230px;
+    height: 100px;
+  }
+
+  /* ajustement de la couleur des boutons de navigation blog  */
+  #blog #navigationblog a:first-child {
+    color: rgb(255, 139, 72);
+  }
+
+  #boutonblog {
+    display: none;
+  }
+
+  #boutonblog2 {
+    margin-top: 30px;
+  }
+
+  .burger,
+  .navigation {
+    display: none;
+  }
+
+  #navigation2 {
+    display: block;
+  }
+
+  #head #menu #tel {
+    right: 0px;
+    top: 80px;
+    background-color: var(--fond-noir);
+    padding: 10px;
+    border-radius: 0px 0px 0px 8px;
+    opacity: 0.7;
+    font-size: 1.2rem;
+  }
+
+  #head #menu #tel:hover {
+    color: rgb(253, 199, 155);
+  }
+
+  /* numéro affiché en version pc */
+  #head #menu #tel #numero {
+    font-family: 'philob';
+    display: inline-block;
+    margin:0 20px 0 10px;
+  }
+
+  #navigation2 {
+    z-index: 10001;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+  }
+
+  #navigation2 ul {
+    display: flex;
+    list-style: none;
+  }
+
+  #navigation2 li {
+    font-size: 1.2rem;
+    padding: 0px 10px;
+    text-transform: uppercase;
+    font-family: 'philo';
+    font-weight: 500;
+  }
+
+  #navigation2 li a:hover {
+    text-decoration: underline;
+    color: rgb(253, 199, 155);
+  }
+
+  #boutonfixeblog {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width:1143px) {
+  #localisation h3 {
+    padding-top: 0;
+  }
+
+  #pied .container {
+    max-width: 1200px;
+  }
+}
