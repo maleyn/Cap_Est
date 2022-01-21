@@ -29,6 +29,11 @@
           <input type="email" name="email" id="email" placeholder="tapez votre Email" required>
         </p>
         <p>
+          <label for="address">Votre adresse</label>
+          <input type="address" name="address" id="address" placeholder="tapez votre adresse" required>
+          <script src="scripts.js"></script>
+        </p>
+        <p>
           <label id="votremessage" for="message">Votre Message</label></p>
         <p>
           <textarea name="message" rows="5" id="message" placeholder="votre message"></textarea>

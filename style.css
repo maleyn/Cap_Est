@@ -784,6 +784,11 @@ a.boutonphoto {
 #contact input {
   padding: 4px;
   font-size: 1rem;
+  width: 300px;
+}
+
+#contact #civilite, #contact #civilitee, #contact #consentement_checkbox {
+  width: 60px;
 }
 
 #contact h3 {
@@ -793,18 +798,18 @@ a.boutonphoto {
 
 #contact label {
   display: inline-block;
-  width: 140px;
+  width: 150px;
   vertical-align: center;
   text-align: left;
 }
 
 #contact label.petit {
-  width: 30px;
+  width: 5px;
   text-align: left;
 }
 
 #contact textarea {
-  width: 320px;
+  width: 420px;
   padding: 5px;
   margin-bottom: 10px;
   font-size: 1.2rem;
