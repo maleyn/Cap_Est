@@ -1,5 +1,6 @@
 <?php include('header.php'); ?>
   <!-- formulaire de contact -->
+ 
   <main class="container marge-top fondgrisfonce">
     <div id="infos">
       <h3>Restaurant CAP EST</h3>
@@ -47,11 +48,13 @@
           <label id="consentement" for="consentement">J'autorise ce site à conserver mes données personnelles transmise via ce formulaire. Aucune exploitation commerciale ne sera faite des données conservées. Voir notre <a href="#">politique de gestion des données personnelles</a></label>
         </p>
         <p>
-          <input type="submit" value="Envoyer" class="boutonform">
+          <input id="envoyer" type="submit" value="Envoyer" class="boutonform">
           <input type="reset" value="Annuler" class="boutonform">
         </p>
       </form>
     </div>
   </main>
   <script type="text/javascript" src="scripts/adresse.js"></script>
+  
+  
 <?php include('footer.php'); ?>
