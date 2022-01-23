@@ -18,11 +18,11 @@
         </p>
         <p>
           <label for="nom">Votre Nom</label>
-          <input type="text" name="nom" id="nom" placeholder="tapez votre nom" required>
+          <input type="text" name="nom" id="nom" placeholder="tapez votre nom" >
         </p>
         <p>
           <label for="prenom">Votre Prénom *</label>
-          <input type="text" name="prenom" id="prenom" placeholder="tapez votre prénom">
+          <input type="text" name="prenom" id="prenom" placeholder="tapez votre prénom" required>
         </p>
         <p>
           <label for="email">Votre Email *</label>
@@ -31,7 +31,11 @@
         <p>
           <label for="address">Votre adresse</label>
           <input type="address" name="address" id="address" placeholder="tapez votre adresse" required>
-          <script src="scripts.js"></script>
+          <div id="listead" class="adhidden">
+          <h4 id="select_titre">Selectionnez votre adresse</h4>
+          <ul id="selection">
+          </ul>
+          </div>
         </p>
         <p>
           <label id="votremessage" for="message">Votre Message</label></p>
@@ -42,8 +46,10 @@
           <input type="checkbox" name="consentement" id="consentement_checkbox" required>
           <label id="consentement" for="consentement">J'autorise ce site à conserver mes données personnelles transmise via ce formulaire. Aucune exploitation commerciale ne sera faite des données conservées. Voir notre <a href="#">politique de gestion des données personnelles</a></label>
         </p>
-        <p><input type="submit" value="Envoyer" class="boutonform"><input type="reset" value="Annuler"
-            class="boutonform"></p>
+        <p>
+          <input type="submit" value="Envoyer" class="boutonform">
+          <input type="reset" value="Annuler" class="boutonform">
+        </p>
       </form>
     </div>
   </main>
