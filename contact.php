@@ -31,7 +31,7 @@
         <p>
           <label for="address">Votre adresse</label>
           <input type="address" name="address" id="address" placeholder="tapez votre adresse" required>
-          <div id="listead" class="adhidden">
+          <div id="listead" class="">
           <h4 id="select_titre">Selectionnez votre adresse</h4>
           <ul id="selection">
           </ul>
@@ -53,4 +53,5 @@
       </form>
     </div>
   </main>
+  <script type="text/javascript" src="scripts/adresse.js"></script>
 <?php include('footer.php'); ?>

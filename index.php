@@ -1,4 +1,6 @@
 <?php include('header.php'); ?>
+<?php require_once("class/variables.php");
+?>
 
 <main id="contenu">
   <section id="ecran_accueil">
@@ -36,50 +38,10 @@
     <h3>AU MENU<br><small>Nos Formules</small></h3>
     <div id="articles" class="container">
       <!-- les formules  -->
-      <article class="formule">
-        <a id="moussaillon" class="vignetteformule" href="#">
-          <img src="images/steak_frite_ld.jpg" alt="steak_frite">
-          <div>
-            <h4>Formule Moussaillon</h4>
-            <p>Plat + dessert</p>
-            <p>(jusqu'à 12ans)</p>
-            <p>10,50 €</p>
-          </div>
-        </a>
-      </article>
-      <article class="formule">
-        <a id="capjour" class="vignetteformule" href="#">
-          <img src="images/poisson_grillé_ld.jpg" alt="poisson_grillé">
-          <div>
-            <h4>Formule Cap Jour</h4>
-            <p>Plat du Jour</p>
-            <p>Entrée et/ou plat et/ou dessert</p>
-            <p>A partir de 9,50 €</p>
-          </div>
-        </a>
-      </article>
-      <article class="formule">
-        <a id="express" class="vignetteformule" href="#">
-          <img src="images/tartare_saumon_ld.jpg" alt=" tartare_saumon">
-          <div>
-            <h4>Formule Cap Express</h4>
-            <p>Entrée + plat ou Entrée + dessert</p>
-            <p>Ou entrée + plat + dessert</p>
-            <p>A partir de 16,50 €</p>
-          </div>
-        </a>
-      </article>
-      <article class="formule">
-        <a id="tradition" class="vignetteformule" href="#">
-          <img src="images/saumon_ld.jpg" alt="saumon">
-          <div>
-            <h4>Formule Cap Tradition</h4>
-            <p>Entrée + plat ou Entrée + dessert</p>
-            <p>Ou entrée + plat + dessert</p>
-            <p>A partir de 18,50 €</p>
-          </div>
-        </a>
-      </article>
+      <?php 
+        // affichage des formules grace aux class
+        $formules->affichageFormules();
+      ?>
     </div>
     <div class="boutons">
       <a href="#" class="boutoncarte">LA CARTE</a>

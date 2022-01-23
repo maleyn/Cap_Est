@@ -117,6 +117,6 @@
     </div>
   </aside>
 </footer>
-<script type="text/javascript" src="scripts/adresse.js"></script>
+
 </body>
 </html>
