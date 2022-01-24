@@ -1,7 +1,6 @@
 /* script permettant de récupérer les adresses de l'api du gouvernement
     et de les afficher en dessous du champs adresse */
 
-
 let address = document.querySelector('#address');
 let div_address = document.querySelector('#listead');
 
@@ -13,7 +12,6 @@ let select = document.querySelector('#selection');
 address.addEventListener('input', displayadd);
 // Dès qu'un input est detecté dans le champ input la fonction displayadd est effectuer
 
-
 function displayadd() {
 // Efface le contenu de l'ul à chaque appel de la fonction
 select.innerHTML = "";
@@ -22,7 +20,6 @@ select.innerHTML = "";
     .then(response => response.json())
     .then(data => {
 
-        select.innerHTML = "";
         let listeadresse = data.features;
     
         if (address){

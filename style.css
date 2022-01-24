@@ -87,6 +87,10 @@ b {
   background-color: var(--grisfonce);
   box-shadow: 0 0 10px rgb(71, 71, 71);
 }
+.fondblanc {
+  background-color: white;
+  box-shadow: 0 0 10px rgb(71, 71, 71);
+}
 
 /* marge du haut des pages a cause du bandeau fixe */
 .marge-top {
@@ -779,8 +783,8 @@ a.boutonphoto {
   margin: 15px 0;
 }
 
-#contact #champs {
-  color: rgb(170, 0, 0);
+#contact .champs {
+  color: rgb(255, 28, 28);
 }
 
 #contact input {
@@ -796,7 +800,7 @@ a.boutonphoto {
 }
 
 #contact h3 {
-  padding-bottom: px;
+  padding-bottom: 10px;
   font-weight: 800;
 }
 
@@ -820,16 +824,14 @@ a.boutonphoto {
   font-size: 1.2rem;
 }
 
-#contact textarea:focus {
-  background-color: rgb(196, 207, 228);
-}
+
 
 #contact textarea:hover {
-  background-color: rgb(196, 228, 226);
+  background-color: rgb(203, 210, 216);
 }
 
 #contact .boutonform {
-  background-color: var(--saumon);
+  background-color: var(--text-blanc);
   border: none;
   border: 1px solid #0085a6;
   margin: 10px 10px 0 0;
@@ -856,17 +858,17 @@ vertical-align: top;
   text-decoration: underline;
 }
 #contact input:hover {
-  background-color: rgb(196, 228, 226);
+  background-color: rgb(212, 219, 224);
+  
 }
 
 #contact input:focus {
   border: none;
-  background-color: rgb(196, 207, 228);
 }
 
 #contact .boutonform:hover {
   cursor: pointer;
-  background-color: rgb(250, 157, 81);
+  background-color: rgb(60, 148, 219);
   color: white;
   box-shadow: 0 0 10px rgb(71, 71, 71);
 }
@@ -1008,7 +1010,7 @@ vertical-align: top;
   padding-left: 5px;
 }
 
-.lienblog input[type=checkbox]:checked+.boitecomment {
+.lienblog {
   display: flex;
 
 }

@@ -238,5 +238,6 @@
       <a class="boutonphoto" href="blog.php">BLOG</a>
     </div>
   </section>
+  
 </main>
 <?php include('footer.php'); ?>

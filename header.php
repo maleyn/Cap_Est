@@ -20,8 +20,8 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
   <link href="style.css" rel="stylesheet" type="text/css">
-  <script type="module" src="./utils/contact.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  
 </head>
 
 <body>
