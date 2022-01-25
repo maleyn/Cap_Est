@@ -9,9 +9,9 @@
   <meta name="description" content="Cap est est un café restaurant situé à Vannes dans le Morbihan (56) en Bretagne Sud vous proposant des repas de famille, repas d'affaires, réunions, petits-déjeuners, journées d'étude" />
   <title>CAP-EST
   </title>
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Cap_Est/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Cap_Est/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Cap_Est/icons/favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link

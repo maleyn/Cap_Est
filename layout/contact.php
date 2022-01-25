@@ -57,5 +57,4 @@
   <script type="text/javascript" src="../scripts/adresse.js"></script>
   <script type="module" src="../scripts/supabase.js"></script>
 
-  
 <?php include('./footer.php'); ?>

@@ -937,13 +937,15 @@ vertical-align: top;
 #blog .card h4 {
   font-size: 1rem;
   font-weight: 300;
+  text-align: left;
+  padding: 10px;
 }
 
 #blog .card h5 {
-  padding-top: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   font-size: 1.1rem;
-
+  text-align: left;
+  padding: 10px;
 }
 
 #blog .card .lienblog {
@@ -954,6 +956,7 @@ vertical-align: top;
 
 #blog .card .lienblog {
   text-align: left;
+  padding-left: 10px;
 }
 
 #blog .card .lienblog a {
