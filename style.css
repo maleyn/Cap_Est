@@ -16,32 +16,32 @@
 /* declaration des polices  */
 @font-face {
   font-family: 'realist';
-  src: url('fonts/realist-webfont.woff2') format('woff2'),
-    url('fonts/realist-webfont.woff') format('woff');
+  src: url('/Cap_Est/fonts/realist-webfont.woff2') format('woff2'),
+    url('/Cap_Est/fonts/realist-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'migha';
-  src: url('fonts/migha-expanded-webfont.woff2') format('woff2'),
-    url('fonts/migha-expanded-webfont.woff') format('woff');
+  src: url('/Cap_Est/fonts/migha-expanded-webfont.woff2') format('woff2'),
+    url('/Cap_Est/fonts/migha-expanded-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'philo';
-  src: url('fonts/philosopher-regular-webfont.woff2') format('woff2'),
-    url('fonts/philosopher-regular-webfont.woff') format('woff');
+  src: url('/Cap_Est/fonts/philosopher-regular-webfont.woff2') format('woff2'),
+    url('/Cap_Est/fonts/philosopher-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'philob';
-  src: url('fonts/philosopher-bold-webfont.woff2') format('woff2'),
-    url('fonts/philosopher-bold-webfont.woff') format('woff');
+  src: url('/Cap_Est/fonts/philosopher-bold-webfont.woff2') format('woff2'),
+    url('/Cap_Est/fonts/philosopher-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -275,7 +275,7 @@ b {
 
 /* photo de fond ecran d'accueil*/
 #photoback1 {
-  background-image: url('images/photo_accueil_ld.jpg');
+  background-image: url('/images/photo_accueil_ld.jpg');
   height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1010,7 +1010,7 @@ vertical-align: top;
   padding-left: 5px;
 }
 
-.lienblog {
+.lienblog input[type=checkbox]:checked+.boitecomment {
   display: flex;
 
 }

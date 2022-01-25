@@ -3,6 +3,7 @@
 include_once("class/formule.php");
 
 class Formules {
+    
     private array $formules = [];
 
     public function ajouter(Formule $formule) {

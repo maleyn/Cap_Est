@@ -1,10 +1,10 @@
-<?php include('header.php'); ?>
-<?php require_once("class/variables.php");
+<?php include('./layout/header.php'); ?>
+<?php require_once("./class/variables.php");
 ?>
 
 <main id="contenu">
   <section id="ecran_accueil">
-
+    
     <!-- photo de fond 1er ecran -->
     <div id="photoback1"></div>
     <!-- bouton 1ere page -->
@@ -84,13 +84,13 @@
       <h3>Actualités</h3>
       <div id="actualite">
         <article class="card">
-          <a href="bloglien1.php"><img src="images/photo_instagram1_ld.jpg" alt="photo_instagram1" loading="lazy"
+          <a href="./layout/bloglien1.php"><img src="images/photo_instagram1_ld.jpg" alt="photo_instagram1" loading="lazy"
               style="width:100%"></a>
           <div class="card_container">
             <h4>02 Nov 2021 par John Doe</h4>
             <h5>Nouveau menu ! Venez découvrir</h5>
             <div class="lienblog">
-              <a href="bloglien2.php">En savoir plus</a>
+              <a href="./layout/bloglien1.php">En savoir plus</a>
               <label for="comment1">2 <i class="fas fa-comments"></i></label>
               <input id="comment1" type="checkbox" role="button" aria-pressed="true">
               <div class="boitecomment">
@@ -107,13 +107,13 @@
           </div>
         </article>
         <article class="card">
-          <a href="bloglien2.php"><img src="images/photo_instagram2_ld.jpg" alt="photo_instagram2" loading="lazy"
+          <a href="./layout/bloglien2.php"><img src="images/photo_instagram2_ld.jpg" alt="photo_instagram2" loading="lazy"
               style="width:100%"></a>
           <div class="card_container">
             <h4>25 Oct 2021 par John Doe</h4>
             <h5>Un grand chef nous rend visite</h5>
             <div class="lienblog">
-              <a href="bloglien2.php">En savoir plus</a>
+              <a href="./layout/bloglien2.php">En savoir plus</a>
               <label for="comment2">2 <i class="fas fa-comments"></i></label>
               <input id="comment2" type="checkbox" role="button" aria-pressed="true">
               <div class="boitecomment">
@@ -130,13 +130,13 @@
           </div>
         </article>
         <article class="card">
-          <a href="bloglien3.php"><img src="images/photo_instagram3_ld.jpg" alt="photo_instagram3" loading="lazy"
+          <a href="./layout/bloglien3.php"><img src="images/photo_instagram3_ld.jpg" alt="photo_instagram3" loading="lazy"
               style="width:100%"></a>
           <div class="card_container">
             <h4>15 Oct 2021 par John Doe</h4>
             <h5>La carte change !</h5>
             <div class="lienblog">
-              <a href="bloglien2.php">En savoir plus</a>
+              <a href="./layout/bloglien3.php">En savoir plus</a>
               <label for="comment3">2 <i class="fas fa-comments"></i></label>
               <input id="comment3" type="checkbox" role="button" aria-pressed="true">
               <div class="boitecomment">
@@ -153,13 +153,13 @@
           </div>
         </article>
         <article class="card">
-          <a href="bloglien4.php"><img src="images/photo_instagram4_ld.jpg" alt="photo_instagram4" loading="lazy"
+          <a href="./layout/bloglien4.php"><img src="images/photo_instagram4_ld.jpg" alt="photo_instagram4" loading="lazy"
               style="width:100%"></a>
           <div class="card_container">
             <h4>3 Oct 2021 par John Doe</h4>
             <h5>Découvrez la nouvelle terrasse !</h5>
             <div class="lienblog">
-              <a href="bloglien2.php">En savoir plus</a>
+              <a href="./layout/bloglien4.php">En savoir plus</a>
               <label for="comment4">2 <i class="fas fa-comments"></i></label>
               <input id="comment4" type="checkbox" role="button" aria-pressed="true">
               <div class="boitecomment">
@@ -176,13 +176,13 @@
           </div>
         </article>
         <article class="card">
-          <a href="bloglien5.php"><img src="images/photo_instagram5_ld.jpg" alt="photo_instagram5" loading="lazy"
+          <a href="./layout/bloglien5.php"><img src="images/photo_instagram5_ld.jpg" alt="photo_instagram5" loading="lazy"
               style="width:100%"></a>
           <div class="card_container">
             <h4>15 Sep 2021 par John Doe</h4>
             <h5>Le site internet évolue !</h5>
             <div class="lienblog">
-              <a href="bloglien2.php">En savoir plus</a>
+              <a href="./layout/bloglien5.php">En savoir plus</a>
               <label for="comment5">2 <i class="fas fa-comments"></i></label>
               <input id="comment5" type="checkbox" role="button" aria-pressed="true">
               <div class="boitecomment">
@@ -199,13 +199,13 @@
           </div>
         </article>
         <article class="card">
-          <a href="bloglien6.php"><img src="images/photo_instagram6_ld.jpg" alt="photo_instagram6" loading="lazy"
+          <a href="./layout/bloglien6.php"><img src="images/photo_instagram6_ld.jpg" alt="photo_instagram6" loading="lazy"
               style="width:100%"></a>
           <div class="card_container">
             <h4>2 Sep 2021 par John Doe</h4>
             <h5>Le menu moussaillon en détails !</h5>
             <div class="lienblog">
-              <a href="bloglien2.php">En savoir plus</a>
+              <a href="./layout/bloglien6.php">En savoir plus</a>
               <label for="comment6">2 <i class="fas fa-comments"></i></label>
               <input id="comment6" type="checkbox" role="button" aria-pressed="true">
               <div class="boitecomment">
@@ -230,14 +230,14 @@
       </nav>
       <!-- bouton blog version mobile et tablette-->
       <div id="boutonblog2" class="boutons">
-        <a class="boutonphoto" href="blog.php">BLOG</a>
+        <a class="boutonphoto" href="./layout/blog.php">BLOG</a>
       </div>
     </div>
     <!-- bouton blog version pc  -->
     <div id="boutonblog" class="boutons">
-      <a class="boutonphoto" href="blog.php">BLOG</a>
+      <a class="boutonphoto" href="./layout/blog.php">BLOG</a>
     </div>
   </section>
   
 </main>
-<?php include('footer.php'); ?>
+<?php include('./layout/footer.php'); ?>
